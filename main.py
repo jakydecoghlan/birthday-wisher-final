@@ -57,8 +57,8 @@ for key, value in birthday_dict.items():
                         connection.starttls()
                         connection.login(user=MY_EMAIL, password=PASSWORD)
                         connection.sendmail(from_addr=MY_EMAIL,
-                                            to_addrs=THEM_EMAIL,
-                                            msg=f"Subject:Feliz cumple!\n\n {random_quote}"
+                                            to_addrs=email,
+                                            msg=f"{bd_letter}"
                                             )
                 #
 
