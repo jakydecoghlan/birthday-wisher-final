@@ -33,7 +33,7 @@ print(df)
 
 birthday_dict = {(data_row["month"], data_row["day"]): data_row["name"]
                  for (index, data_row) in df.iterrows()}
-# print(birthday_dict)
+print(birthday_dict)
 
 for key, value in birthday_dict.items():
     if key == today:
@@ -58,15 +58,8 @@ for key, value in birthday_dict.items():
                         connection.login(user=MY_EMAIL, password=PASSWORD)
                         connection.sendmail(from_addr=MY_EMAIL,
                                             to_addrs=email,
-                                            msg=f"{bd_letter}"
+                                            msg=f"Subject:Feliz Cumple! \n\n {bd_letter}"
                                             )
-                #
-
-
-
-
-
-
 
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 
